@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<h3> 新しいレビュー</h3>
+  <form action="/registnewreview" method="post">
+    <div class="container columns">
+      <div class="lcol column">
+        <div class="bookinfo">
+          <div class="bookttl">
+            <input type="text" name="booktitle">
+          </div>
+          <div class="bookauth">
+            <input type="text" name="bookauth">
+          </div>
+        </div>
+        <div class="thisbookreview">
+          <textarea name="review" rows="8" cols="80"></textarea>
+        </div>
+      </div>
+    </div>
+  <input type="submit" name="submit" value="登録">
+  </form>
+
+
+{% endblock %}
