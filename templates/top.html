@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>本ログTOP</h3>
+こんにちは。{{ name }}さん。
+<div class="columns">
+{% for data in database %}
+<div class="column">
+  <a href="/bookreviwe/{{ data["bookid"] }}" id="{{ data["bookid"] }}">
+    <div class="book-elm">
+      <div class="book-title">{{  data["title"] }}</div>
+      <div class="book-img">something</div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

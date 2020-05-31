@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>{{bookdata.title}} のレビュー</h3>
+<div class="container columns">
+  <div class="lcol column">
+    <div class="bookinfo">
+      <div class="bookttl">{{bookdata.title}}</div>
+      <div class="bookauth">{{bookdata.auth}}</div>
+    </div>
+    <div class="bookimg">
+      <img src="" alt="">
+    </div>
+    <div class="thisbookreview">
+      <p>{{bookdata.date}}</p>
+      <p>{{bookdata.review}}</p>
+    </div>
+  </div>
+  <div class="rcol column">
+    <ul class="thred">
+      {% for data in booktalk %}
+      <li class="thred-elm">{{data}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
