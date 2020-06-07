@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String
 import random, string
 import datetime
+import os
 app = Flask(__name__)  # アプリの設定
 
 app.config['SECRET_KEY'] = 'secret key'
